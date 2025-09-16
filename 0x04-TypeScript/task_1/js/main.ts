@@ -9,7 +9,9 @@ interface Teacher {
 }
 
 // Example usage
-const teacher3: Teacher = {
+const teacher3: Teacher =
+
+{
   firstName: "John",
   lastName: "Doe",
   fullTimeEmployee: false,
@@ -21,7 +23,8 @@ console.log(teacher3);
 
 
 // Teacher interface definition
-interface Teacher {
+interface Teacher
+ {
   readonly firstName: string;        // read-only
   readonly lastName: string;         // read-only
   fullTimeEmployee: boolean;         // mandatory
@@ -31,12 +34,16 @@ interface Teacher {
      // allow extra attributes
 
 }// PrintTeacherFunction interface
-interface PrintTeacherFunction {
+interface PrintTeacherFunction
+
+{
   (firstName: string, lastName: string): string;
 }
 
 // Implementation of the function
-const printTeacher: PrintTeacherFunction = (firstName, lastName) => {
+const printTeacher: PrintTeacherFunction = (firstName, lastName) =>
+  
+  {
   return `${firstName.charAt(0)}. ${lastName}`;
 };
 
@@ -46,7 +53,8 @@ console.log(printTeacher("John", "Doe"));  // Output: J. Doe
 
 
 // Teacher interface definition
-interface Teacher {
+interface Teacher
+ {
   readonly firstName: string;        // read-only
   readonly lastName: string;         // read-only
   fullTimeEmployee: boolean;         // mandatory
@@ -57,7 +65,8 @@ interface Teacher {
 
 
 // Directors interface extending Teacher
-interface Directors extends Teacher {
+interface Directors extends Teacher
+ {
   numberOfReports: number;           // new mandatory attribute
 }
 
@@ -73,7 +82,10 @@ const director1: Directors = {
 console.log(director1);
 
 // Teacher interface
-interface Teacher {
+interface Teacher
+
+ {
+
   readonly firstName: string;
   readonly lastName: string;
   fullTimeEmployee: boolean;
@@ -83,18 +95,24 @@ interface Teacher {
 }
 
 // Directors interface extending Teacher
+
 interface Directors extends Teacher {
   numberOfReports: number;
 }
 
 // Function interface
-interface printTeacherFunction {
+interface printTeacherFunction
+
+{
+
   (firstName: string, lastName: string): string;
 }
 
 //  Function implementation (checker-friendly)
 function printTeacher(firstName: string, lastName: string): string {
+
   return `${firstName[0]}. ${lastName}`;
+
 }
 
 // Example usage
