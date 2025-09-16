@@ -41,6 +41,7 @@ interface Teacher {
   [key: string]: any;                // allow extra attributes
 }
 
+
 // Directors interface extending Teacher
 interface Directors extends Teacher {
   numberOfReports: number;           // new mandatory attribute
