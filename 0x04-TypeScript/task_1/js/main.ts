@@ -108,11 +108,15 @@ interface printTeacherFunction
   (firstName: string, lastName: string): string;
 }
 
-//  Function implementation (checker-friendly)
+
+// PrintTeacherFunction interface
+interface printTeacherFunction {
+  (firstName: string, lastName: string): string;
+}
+
+// Implementation as a normal function (not arrow, no destructuring)
 function printTeacher(firstName: string, lastName: string): string {
-
   return `${firstName[0]}. ${lastName}`;
-
 }
 
 // Example usage
