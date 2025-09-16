@@ -27,8 +27,22 @@ interface Teacher {
   fullTimeEmployee: boolean;         // mandatory
   location: string;                  // mandatory
   yearsOfExperience?: number;        // optional
-  [key: string]: any;                // allow extra attributes
+  [key: string]: any;             
+     // allow extra attributes
+     
+}// PrintTeacherFunction interface
+interface PrintTeacherFunction {
+  (firstName: string, lastName: string): string;
 }
+
+// Implementation of the function
+const printTeacher: PrintTeacherFunction = (firstName, lastName) => {
+  return `${firstName.charAt(0)}. ${lastName}`;
+};
+
+// Example usage
+console.log(printTeacher("John", "Doe"));  // Output: J. Doe
+
 
 
 // Teacher interface definition
