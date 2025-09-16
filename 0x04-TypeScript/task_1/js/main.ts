@@ -30,6 +30,17 @@ interface Teacher {
   [key: string]: any;                // allow extra attributes
 }
 
+
+// Teacher interface definition
+interface Teacher {
+  readonly firstName: string;        // read-only
+  readonly lastName: string;         // read-only
+  fullTimeEmployee: boolean;         // mandatory
+  location: string;                  // mandatory
+  yearsOfExperience?: number;        // optional
+  [key: string]: any;                // allow extra attributes
+}
+
 // Directors interface extending Teacher
 interface Directors extends Teacher {
   numberOfReports: number;           // new mandatory attribute
