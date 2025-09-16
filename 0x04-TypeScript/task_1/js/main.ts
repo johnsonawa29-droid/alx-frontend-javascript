@@ -29,7 +29,7 @@ interface Teacher {
   yearsOfExperience?: number;        // optional
   [key: string]: any;             
      // allow extra attributes
-     
+
 }// PrintTeacherFunction interface
 interface PrintTeacherFunction {
   (firstName: string, lastName: string): string;
@@ -71,3 +71,31 @@ const director1: Directors = {
 };
 
 console.log(director1);
+
+// Teacher interface
+interface Teacher {
+  readonly firstName: string;
+  readonly lastName: string;
+  fullTimeEmployee: boolean;
+  location: string;
+  yearsOfExperience?: number;
+  [key: string]: any;
+}
+
+// Directors interface extending Teacher
+interface Directors extends Teacher {
+  numberOfReports: number;
+}
+
+//  PrintTeacherFunction interface
+interface printTeacherFunction {
+  (firstName: string, lastName: string): string;
+}
+
+//  Implementation of the function
+const printTeacher: printTeacherFunction = (firstName, lastName) => {
+  return `${firstName.charAt(0)}. ${lastName}`;
+};
+
+// Example usage
+console.log(printTeacher("John", "Doe")); // Output: J. Doe
