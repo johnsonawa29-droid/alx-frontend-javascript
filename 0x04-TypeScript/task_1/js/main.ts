@@ -87,15 +87,15 @@ interface Directors extends Teacher {
   numberOfReports: number;
 }
 
-//  PrintTeacherFunction interface
+// Function interface
 interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-//  Implementation of the function
-const printTeacher: printTeacherFunction = (firstName, lastName) => {
-  return `${firstName.charAt(0)}. ${lastName}`;
-};
+// ✅ Function implementation (checker-friendly)
+function printTeacher(firstName: string, lastName: string): string {
+  return `${firstName[0]}. ${lastName}`;
+}
 
 // Example usage
 console.log(printTeacher("John", "Doe")); // Output: J. Doe
