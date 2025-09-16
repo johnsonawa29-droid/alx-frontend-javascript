@@ -82,10 +82,7 @@ const director1: Directors = {
 console.log(director1);
 
 // Teacher interface
-interface Teacher
-
- {
-
+interface Teacher {
   readonly firstName: string;
   readonly lastName: string;
   fullTimeEmployee: boolean;
@@ -95,26 +92,16 @@ interface Teacher
 }
 
 // Directors interface extending Teacher
-
 interface Directors extends Teacher {
   numberOfReports: number;
 }
 
-// Function interface
-interface printTeacherFunction
-
-{
-
-  (firstName: string, lastName: string): string;
-}
-
-
-// PrintTeacherFunction interface
+// Interface for the function
 interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-// Implementation as a normal function (not arrow, no destructuring)
+// Function implementation
 function printTeacher(firstName: string, lastName: string): string {
   return `${firstName[0]}. ${lastName}`;
 }
