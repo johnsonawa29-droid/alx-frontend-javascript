@@ -1,3 +1,4 @@
+
 // task_2/js/main.ts
 
 // Director interface
@@ -46,8 +47,11 @@ class Teacher implements TeacherInterface {
 
 // Function createEmployee
 function createEmployee(salary: number | string): Director | Teacher {
-  if (typeof salary === "number" && salary < 500) {
-    return new Teacher();
+  if (typeof salary === "number") {
+    if (salary < 500) {
+      return new Teacher();
+    }
+    return new Director();
   }
   return new Director();
 }
